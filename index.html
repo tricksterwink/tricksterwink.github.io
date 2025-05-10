@@ -1,1 +1,317 @@
-Hello World
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  
+  <title>Herman&#x27;s blog</title>
+  <link rel="canonical" href="https://herman.bearblog.dev">
+  
+
+
+<meta name="herman" content="look-for-the-bear-necessities">
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="Herman&#x27;s blog">
+<meta name="description" content="Hi I&#x27;m Herman Martinus. I&#x27;m a maker of things, rider of bikes, and hiker of mountains.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:site_name" content="Herman&#x27;s blog">
+<meta property="og:title" content="Herman&#x27;s blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://herman.bearblog.dev">
+<meta property="og:description" content="Hi I&#x27;m Herman Martinus. I&#x27;m a maker of things, rider of bikes, and hiker of mountains.">
+<meta property="og:image" content="https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png">
+
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary">
+<meta property="twitter:url" content="https://herman.bearblog.dev">
+<meta property="twitter:title" content="Herman&#x27;s blog">
+<meta property="twitter:description" content="Hi I&#x27;m Herman Martinus. I&#x27;m a maker of things, rider of bikes, and hiker of mountains.">
+<meta property="twitter:image" content="https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png">
+
+
+
+<!-- Microdata -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "website",
+    "name": "Herman&#x27;s blog",
+    "url": "https://herman.bearblog.dev",
+    "description": "Hi I&#x27;m Herman Martinus. I&#x27;m a maker of things, rider of bikes, and hiker of mountains.",
+    "about": {
+      "@type": "Herman&#x27;s blog",
+      "description": "Hi I&#x27;m Herman Martinus. I&#x27;m a maker of things, rider of bikes, and hiker of mountains."
+    }
+  }
+</script>
+<link rel="alternate" type="application/atom+xml" href="/feed/">
+<link rel="alternate" type="application/rss+xml" href="/feed/?type=rss">
+
+  
+
+
+
+
+
+  
+  
+  
+    
+        <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E🐨%3C/text%3E%3C/svg%3E">
+    
+
+
+
+  <style>
+      
+      
+:root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color:  #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #01242e;
+        --heading-color: #eee;
+        --text-color: #ddd;
+        --link-color: #8cc2dd;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #000;
+        --code-color: #ddd;
+        --blockquote-color: #ccc;
+    }
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+ 	font-family: monospace;
+  	font-style: normal;
+  	font-size: 15px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight, .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+      
+  </style>
+
+  
+</head>
+
+<body class="home" onload="(function() { document.cookie = `timezone=${Intl.DateTimeFormat().resolvedOptions().timeZone};path=/`; })()">
+  
+  <header>
+    <a class="title" href="/">
+      <h1>
+        Herman&#x27;s blog
+      </h1>
+    </a>
+    <nav>
+      <p><a href='/'>Home</a> <a href='/now/'>Now</a> <a href='/projects/'>Projects</a> <a href='/blog/'>Blog</a></p>
+
+    </nav>
+  </header>
+  <main>
+    
+
+
+
+<h1 id=hi-im-herman-martinus>Hi I'm Herman Martinus.</h1><h3 id=i-write-words-ride-bikes-climb-mountains-and-make-things>I write words, ride bikes, climb mountains, and make things.</h3><p>Currently living in <a href='https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1710922371-0.jpg' target='_blank'>Cape Town</a> — possibly the most beautiful city in the world.</p>
+<p>I'm the creator of the no-nonsense blogging platform, <a href='//bearblog.dev' target='_blank'>Bear</a>, and a few <a href='/projects/'>other things</a>.</p>
+<p>I also <a href='/blog/'>write</a> short-to-mid length essays about life, tech, and whatever I currently find interesting.</p>
+<h3 id=my-most-recent-posts>My most recent posts</h3><ul>
+<li><a href='/coffee/'>Yes, I will have coffee with you</a></li>
+<li><a href='/the-great-scrape/'>The Great Scrape</a></li>
+<li><a href='/silence/'>The sound of silence</a></li>
+<li><a href='/manifesto/'>The Bear Manifesto</a></li>
+<li><a href='/active-rest/'>Active rest</a></li>
+</ul>
+<h3 id=my-most-popular-posts>My most popular posts</h3><ul>
+<li><a href='/my-product-is-my-garden/'>My product is my garden</a></li>
+<li><a href='/building-software-to-last-forever'>Building software to last forever</a></li>
+<li><a href='/the-frustration-loop/'>The Frustration Loop</a></li>
+<li><a href='/how-i-stay-motivated-as-a-solo-creator/'>How I stay motivated as a solo creator</a></li>
+<li><a href='/how-bear-does-analytics-with-css/'>How Bear does analytics with CSS</a></li>
+</ul>
+
+
+
+
+
+
+
+  </main>
+  <footer style="padding:25px 0;">
+    
+
+<span id="footer-directive">
+    <p><small>Subscribe via <a href='/feed/'>rss</a>, <a href='/subscribe/'>email</a> or just say <a href='/contact/'>hello</a>.</small></p>
+<script src="https://analytics.herm.app/script.js" data-site="BXLKPFV" defer></script>
+<script>
+  // Select the main container and the blog posts list
+  const mainContainer = document.querySelector('.blog main');
+  const blogPosts = document.querySelector('.blog .blog-posts');
+
+  if (blogPosts) {
+  const searchInput = document.createElement('input');
+  searchInput.type = 'text';
+  searchInput.id = 'searchInput';
+  searchInput.placeholder = 'Search...';
+  searchInput.style.display = 'block';
+
+  mainContainer.insertBefore(searchInput, blogPosts);
+
+  // Add event listener to filter posts based on input
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    const posts = document.querySelectorAll('.blog-posts li');
+
+    posts.forEach(post => {
+      const title = post.textContent.toLowerCase();
+      post.style.display = title.includes(searchTerm) ? '' : 'none';
+    });
+  });
+}
+</script>
+
+</span>
+
+<span>
+    Powered by <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a>
+</span>
+
+  </footer>
+</body>
+</html>
