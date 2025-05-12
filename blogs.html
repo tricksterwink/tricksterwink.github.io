@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Blog Posts</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                color: #333;
+            }
+            nav {
+                margin-bottom: 40px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+            nav a {
+                margin-right: 20px;
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+            }
+            nav a:hover {
+                color: #666;
+            }
+            .timeline {
+                position: relative;
+                padding-left: 30px;
+            }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: #eee;
+            }
+            .timeline-item {
+                position: relative;
+                margin-bottom: 40px;
+            }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -34px;
+                top: 0;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #333;
+                border: 2px solid #fff;
+            }
+            .timeline-date {
+                color: #666;
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+            .timeline-content {
+                background: #f9f9f9;
+                padding: 20px;
+                border-radius: 4px;
+            }
+            .timeline-content h2 {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Blogs</a>
+        </nav>
+
+        <main>
+            <h1>All Blog Posts</h1>
+            
+            <div class="timeline">
+                <article id="post-1" class="timeline-item">
+                    <div class="timeline-date">March 15, 2024</div>
+                    <div class="timeline-content">
+                        <h2>Getting Started with Web Development</h2>
+                        <p>Web development can seem overwhelming at first, but with the right approach, anyone can learn it. In this post, I'll share my journey and the fundamental concepts that helped me get started...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </article>
+
+                <article id="post-2" class="timeline-item">
+                    <div class="timeline-date">March 10, 2024</div>
+                    <div class="timeline-content">
+                        <h2>The Art of Minimalism</h2>
+                        <p>Minimalism isn't just about having fewer things - it's about having more of what matters. In this post, I explore how adopting a minimalist mindset has transformed my life and work...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </article>
+
+                <article id="post-3" class="timeline-item">
+                    <div class="timeline-date">March 5, 2024</div>
+                    <div class="timeline-content">
+                        <h2>My Journey in Tech</h2>
+                        <p>From my first line of code to becoming a professional developer, this post chronicles my personal journey through the ever-evolving world of technology...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </article>
+
+                <article id="post-4" class="timeline-item">
+                    <div class="timeline-date">February 28, 2024</div>
+                    <div class="timeline-content">
+                        <h2>The Future of Web Design</h2>
+                        <p>As we move forward in the digital age, web design continues to evolve. Let's explore the emerging trends and technologies that are shaping the future of the web...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </body>
+</html> 
