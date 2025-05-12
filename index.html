@@ -12,6 +12,11 @@
                 margin: 0 auto;
                 padding: 20px;
                 color: #333;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            body.dark-mode {
+                background-color: #1a1a1a;
+                color: #f0f0f0;
             }
             nav {
                 margin-bottom: 40px;
@@ -24,8 +29,14 @@
                 color: #333;
                 font-weight: 500;
             }
+            body.dark-mode nav a {
+                color: #f0f0f0;
+            }
             nav a:hover {
                 color: #666;
+            }
+            body.dark-mode nav a:hover {
+                color: #ccc;
             }
             .about-section {
                 margin-bottom: 40px;
@@ -38,6 +49,9 @@
                 padding-bottom: 20px;
                 border-bottom: 1px solid #eee;
             }
+            body.dark-mode .post-preview {
+                border-bottom-color: #444;
+            }
             .post-preview h2 {
                 margin-bottom: 10px;
             }
@@ -45,6 +59,62 @@
                 color: #666;
                 font-size: 0.9em;
                 margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            body.dark-mode .post-meta {
+                color: #aaa;
+            }
+            .dark-mode-toggle {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #f0f0f0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            body.dark-mode .dark-mode-toggle {
+                background: #2a2a2a;
+                color: #f0f0f0;
+            }
+            .back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                cursor: pointer;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            body.dark-mode .back-to-top {
+                background: #f0f0f0;
+                color: #333;
+            }
+            .reading-time {
+                font-size: 0.8em;
+                color: #888;
+            }
+            body.dark-mode .reading-time {
+                color: #888;
             }
         </style>
     </head>
@@ -64,25 +134,35 @@
                 <h2>Recent Posts</h2>
                 <article class="post-preview">
                     <h3>Getting Started with Web Development</h3>
-                    <div class="post-meta">March 15, 2024</div>
+                    <div class="post-meta">
+                        <span>March 15, 2024</span>
+                        <span class="reading-time">5 min read</span>
+                    </div>
                     <p>A beginner's guide to web development, covering HTML, CSS, and JavaScript fundamentals...</p>
                     <a href="blogs.html#post-1">Read more →</a>
                 </article>
 
                 <article class="post-preview">
                     <h3>The Art of Minimalism</h3>
-                    <div class="post-meta">March 10, 2024</div>
+                    <div class="post-meta">
+                        <span>March 10, 2024</span>
+                        <span class="reading-time">4 min read</span>
+                    </div>
                     <p>Exploring how minimalism can improve your life and work...</p>
                     <a href="blogs.html#post-2">Read more →</a>
                 </article>
 
                 <article class="post-preview">
                     <h3>My Journey in Tech</h3>
-                    <div class="post-meta">March 5, 2024</div>
+                    <div class="post-meta">
+                        <span>March 5, 2024</span>
+                        <span class="reading-time">6 min read</span>
+                    </div>
                     <p>Reflections on my personal journey through the world of technology...</p>
                     <a href="blogs.html#post-3">Read more →</a>
                 </article>
             </section>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>
