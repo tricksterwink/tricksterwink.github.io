@@ -3,9 +3,86 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Web Page</title>
+        <title>My Blog</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                color: #333;
+            }
+            nav {
+                margin-bottom: 40px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+            nav a {
+                margin-right: 20px;
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+            }
+            nav a:hover {
+                color: #666;
+            }
+            .about-section {
+                margin-bottom: 40px;
+            }
+            .recent-posts {
+                margin-top: 40px;
+            }
+            .post-preview {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #eee;
+            }
+            .post-preview h2 {
+                margin-bottom: 10px;
+            }
+            .post-meta {
+                color: #666;
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello World</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Blogs</a>
+        </nav>
+
+        <main>
+            <section class="about-section">
+                <h1>About Me</h1>
+                <p>Welcome to my blog! I'm a passionate writer and thinker sharing my thoughts and experiences through these pages. I write about technology, life, and everything in between.</p>
+            </section>
+
+            <section class="recent-posts">
+                <h2>Recent Posts</h2>
+                <article class="post-preview">
+                    <h3>Getting Started with Web Development</h3>
+                    <div class="post-meta">March 15, 2024</div>
+                    <p>A beginner's guide to web development, covering HTML, CSS, and JavaScript fundamentals...</p>
+                    <a href="blogs.html#post-1">Read more →</a>
+                </article>
+
+                <article class="post-preview">
+                    <h3>The Art of Minimalism</h3>
+                    <div class="post-meta">March 10, 2024</div>
+                    <p>Exploring how minimalism can improve your life and work...</p>
+                    <a href="blogs.html#post-2">Read more →</a>
+                </article>
+
+                <article class="post-preview">
+                    <h3>My Journey in Tech</h3>
+                    <div class="post-meta">March 5, 2024</div>
+                    <p>Reflections on my personal journey through the world of technology...</p>
+                    <a href="blogs.html#post-3">Read more →</a>
+                </article>
+            </section>
+        </main>
     </body>
 </html>
