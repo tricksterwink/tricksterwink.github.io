@@ -3,200 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>All Blog Posts</title>
-        <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                line-height: 1.6;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-                color: #333;
-                transition: background-color 0.3s, color 0.3s;
-            }
-            body.dark-mode {
-                background-color: #1a1a1a;
-                color: #f0f0f0;
-            }
-            nav {
-                margin-bottom: 40px;
-                border-bottom: 1px solid #eee;
-                padding-bottom: 10px;
-            }
-            nav a {
-                margin-right: 20px;
-                text-decoration: none;
-                color: #333;
-                font-weight: 500;
-            }
-            body.dark-mode nav a {
-                color: #f0f0f0;
-            }
-            nav a:hover {
-                color: #666;
-            }
-            body.dark-mode nav a:hover {
-                color: #ccc;
-            }
-            .timeline {
-                position: relative;
-                padding-left: 30px;
-            }
-            .timeline::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                width: 2px;
-                background: #eee;
-            }
-            body.dark-mode .timeline::before {
-                background: #444;
-            }
-            .timeline-item {
-                position: relative;
-                margin-bottom: 40px;
-            }
-            .timeline-item::before {
-                content: '';
-                position: absolute;
-                left: -34px;
-                top: 0;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background: #333;
-                border: 2px solid #fff;
-            }
-            body.dark-mode .timeline-item::before {
-                background: #f0f0f0;
-                border-color: #1a1a1a;
-            }
-            .timeline-date {
-                color: #666;
-                font-size: 0.9em;
-                margin-bottom: 10px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-            body.dark-mode .timeline-date {
-                color: #aaa;
-            }
-            .timeline-content {
-                background: #f9f9f9;
-                padding: 20px;
-                border-radius: 4px;
-                transition: background-color 0.3s;
-            }
-            body.dark-mode .timeline-content {
-                background: #2a2a2a;
-            }
-            .timeline-content h2 {
-                margin-top: 0;
-                margin-bottom: 10px;
-            }
-            .search-container {
-                margin-bottom: 30px;
-            }
-            .search-input {
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                font-size: 16px;
-                background: #fff;
-                color: #333;
-            }
-            body.dark-mode .search-input {
-                background: #2a2a2a;
-                border-color: #444;
-                color: #f0f0f0;
-            }
-            .search-results {
-                position: absolute;
-                background: #fff;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                width: 100%;
-                max-width: 760px;
-                margin-top: 5px;
-                display: none;
-                z-index: 1000;
-            }
-            body.dark-mode .search-results {
-                background: #2a2a2a;
-                border-color: #444;
-            }
-            .search-result-item {
-                display: block;
-                padding: 10px;
-                text-decoration: none;
-                color: #333;
-                border-bottom: 1px solid #eee;
-            }
-            body.dark-mode .search-result-item {
-                color: #f0f0f0;
-                border-bottom-color: #444;
-            }
-            .search-result-item:hover {
-                background: #f5f5f5;
-            }
-            body.dark-mode .search-result-item:hover {
-                background: #333;
-            }
-            .reading-time {
-                font-size: 0.8em;
-                color: #888;
-            }
-            body.dark-mode .reading-time {
-                color: #888;
-            }
-            .dark-mode-toggle {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                padding: 5px;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #f0f0f0;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-            body.dark-mode .dark-mode-toggle {
-                background: #2a2a2a;
-                color: #f0f0f0;
-            }
-            .back-to-top {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background: #333;
-                color: white;
-                border: none;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-                cursor: pointer;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            }
-            body.dark-mode .back-to-top {
-                background: #f0f0f0;
-                color: #333;
-            }
-        </style>
+        <title>Blog Posts</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <nav>
@@ -204,47 +12,64 @@
             <a href="blogs.html">Blogs</a>
         </nav>
 
-        <main>
-            <h1>All Blog Posts</h1>
-            
-            <div class="timeline">
-                <article id="post-1" class="timeline-item">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search blog posts...">
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
                     <div class="timeline-date">March 15, 2024</div>
-                    <div class="timeline-content">
-                        <h2>Getting Started with Web Development</h2>
-                        <p>Web development can seem overwhelming at first, but with the right approach, anyone can learn it. In this post, I'll share my journey and the fundamental concepts that helped me get started...</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </article>
-
-                <article id="post-2" class="timeline-item">
-                    <div class="timeline-date">March 10, 2024</div>
-                    <div class="timeline-content">
-                        <h2>The Art of Minimalism</h2>
-                        <p>Minimalism isn't just about having fewer things - it's about having more of what matters. In this post, I explore how adopting a minimalist mindset has transformed my life and work...</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </article>
-
-                <article id="post-3" class="timeline-item">
-                    <div class="timeline-date">March 5, 2024</div>
-                    <div class="timeline-content">
-                        <h2>My Journey in Tech</h2>
-                        <p>From my first line of code to becoming a professional developer, this post chronicles my personal journey through the ever-evolving world of technology...</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </article>
-
-                <article id="post-4" class="timeline-item">
-                    <div class="timeline-date">February 28, 2024</div>
-                    <div class="timeline-content">
-                        <h2>The Future of Web Design</h2>
-                        <p>As we move forward in the digital age, web design continues to evolve. Let's explore the emerging trends and technologies that are shaping the future of the web...</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </article>
+                    <h3 class="timeline-title">
+                        <a href="blog1.html">Getting Started with Web Development</a>
+                    </h3>
+                    <p class="timeline-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
             </div>
-        </main>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">March 10, 2024</div>
+                    <h3 class="timeline-title">
+                        <a href="blog2.html">The Art of Minimalism in Web Design</a>
+                    </h3>
+                    <p class="timeline-excerpt">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">March 5, 2024</div>
+                    <h3 class="timeline-title">
+                        <a href="blog3.html">My Journey in Tech: From Novice to Professional</a>
+                    </h3>
+                    <p class="timeline-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">February 28, 2024</div>
+                    <h3 class="timeline-title">
+                        <a href="blog4.html">The Future of Web Design</a>
+                    </h3>
+                    <p class="timeline-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">February 20, 2024</div>
+                    <h3 class="timeline-title">
+                        <a href="blog5.html">Building Responsive Websites</a>
+                    </h3>
+                    <p class="timeline-excerpt">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="dark-mode-toggle" title="Toggle dark mode">🌙</button>
+        <button class="back-to-top" title="Back to top">↑</button>
         <script src="script.js"></script>
     </body>
 </html> 
