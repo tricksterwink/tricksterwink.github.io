@@ -1,0 +1,228 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+nav {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+body.dark-mode nav a {
+    color: #f0f0f0;
+}
+
+nav a:hover {
+    color: #666;
+}
+
+body.dark-mode nav a:hover {
+    color: #ccc;
+}
+
+.blog-content {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+body.dark-mode .blog-content {
+    background: #2a2a2a;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.dark-mode .blog-meta {
+    color: #aaa;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .back-to-top {
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* Timeline specific styles */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #eee;
+}
+
+body.dark-mode .timeline::before {
+    background: #333;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #eee;
+}
+
+body.dark-mode .timeline-item::before {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.timeline-content {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+body.dark-mode .timeline-content {
+    background: #2a2a2a;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+.timeline-date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .timeline-date {
+    color: #aaa;
+}
+
+.timeline-title {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.timeline-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+body.dark-mode .timeline-title a {
+    color: #f0f0f0;
+}
+
+.timeline-title a:hover {
+    color: #666;
+}
+
+body.dark-mode .timeline-title a:hover {
+    color: #ccc;
+}
+
+.timeline-excerpt {
+    color: #666;
+    margin: 0;
+}
+
+body.dark-mode .timeline-excerpt {
+    color: #aaa;
+}
+
+/* Search specific styles */
+.search-container {
+    margin-bottom: 30px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+body.dark-mode .search-input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #f0f0f0;
+} 
